@@ -6,8 +6,10 @@ export type Meter = {
   contextWindow: number
   limits: Limit[]
   costUsd?: number
+  todayUsd: number
   lastTurnTokens: number
   sessionTokens: number
+  agentTokens: number
   turns: number
 }
 
@@ -17,6 +19,7 @@ declare module 'claude-code' {
       meter: Shaped<Meter | null>
       isHidden: boolean
       warned: Record<string, number>
+      lastCost: number | null
     }
   }
 }

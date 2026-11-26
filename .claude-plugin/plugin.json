@@ -1,11 +1,68 @@
 {
   "name": "usage-meter",
-  "version": "0.1.0",
-  "description": "Live token usage, context fill, cost and rate-limit line for Claude Code, with warnings on heavy usage or approaching limits",
-  "author": { "name": "Aatra", "url": "https://aatra.ai" },
+  "version": "0.2.0",
+  "description": "Live token usage, limits and spend for Claude Code, with warnings before you hit a limit or budget. Works on subscriptions, API keys and cloud providers.",
+  "author": {
+    "name": "Aatra",
+    "url": "https://aatra.ai"
+  },
   "homepage": "https://github.com/aatra-ai/claude-code-usage-meter",
   "repository": "https://github.com/aatra-ai/claude-code-usage-meter",
   "license": "MIT",
-  "keywords": ["usage", "tokens", "rate-limits", "cost", "context", "status", "mod"],
-  "types": "./types/index.d.ts"
+  "keywords": [
+    "usage",
+    "tokens",
+    "rate-limits",
+    "cost",
+    "context",
+    "status",
+    "mod",
+    "budget",
+    "api"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "sessionBudgetUsd": {
+      "type": "number",
+      "title": "Session budget (USD)",
+      "description": "Warn as one session's estimated cost nears this. 0 turns it off.",
+      "default": 0
+    },
+    "dailyBudgetUsd": {
+      "type": "number",
+      "title": "Daily budget (USD)",
+      "description": "Warn as today's estimated cost across all sessions nears this. 0 turns it off.",
+      "default": 0
+    },
+    "limitWarnPercent": {
+      "type": "number",
+      "title": "First warning (%)",
+      "description": "First warning for usage limits and budgets.",
+      "default": 75
+    },
+    "limitAlertPercent": {
+      "type": "number",
+      "title": "Second warning (%)",
+      "description": "Second warning for usage limits and budgets.",
+      "default": 90
+    },
+    "contextWarnPercent": {
+      "type": "number",
+      "title": "Context warning (%)",
+      "description": "Warn when the context window is this full.",
+      "default": 80
+    },
+    "heavyTurnTokens": {
+      "type": "number",
+      "title": "Heavy turn (tokens)",
+      "description": "Flag a turn that uses at least this many tokens. 0 turns it off.",
+      "default": 200000
+    },
+    "heavyTurnUsd": {
+      "type": "number",
+      "title": "Heavy turn (USD)",
+      "description": "Flag a turn whose estimated cost is at least this. 0 turns it off.",
+      "default": 2
+    }
+  }
 }

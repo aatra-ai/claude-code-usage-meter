@@ -19,6 +19,7 @@ Answer `y`, then choose the **user** scope.
 
 - The line above your prompt updates as you work. It turns yellow, then red, near a limit.
 - You get a pop-up at 75% and 90% of a limit, and when context is filling up.
+- On an API key or a cloud provider (no plan limits), it shows today's spend. Set a session or daily budget to get warnings for those too: `/plugin configure usage-meter@usage-meter`.
 - `/usage-meter` shows a detailed breakdown. `/usage-meter toggle` hides the line.
 
 ## Learn more
