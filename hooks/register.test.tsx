@@ -110,3 +110,18 @@ test('custom warning levels replace the defaults', { options: { limitWarnPercent
   await $.session.measure(measure({ limits: fiveHour(70) }))
   expect(toasts.length).toBe(2)
 })
+
+test('fresh session: context not measured yet shows a dash, not ?', async ($, on) => {
+  engine(on)
+  await $.session.measure({
+    context: { window: 1_000_000 },
+    rateLimits: [],
+    cost: { usd: 0 },
+    changed: ['cost' as const],
+  })
+
+  const ui = await $.ui.mount({ ...BAND, surface: 'terminal' })
+  expect((await ui.find({ type: 'Text', text: /^–$/ }))?.text).toBe('–')
+  expect(await ui.find({ type: 'Text', text: /\?/ })).toBeUndefined()
+  await ui.unmount()
+})

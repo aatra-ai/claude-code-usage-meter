@@ -264,7 +264,9 @@ export const register: Register = (on, options) => {
       .slice(-7)
       .map(day => `${day} ~${usd(spend[day] ?? 0)}`)
     const lines = [
-      `Context: ${u.context.percent ?? '?'}% (${short(u.context.tokens ?? 0)} / ${short(u.context.window)} tokens)`,
+      u.context.percent === undefined
+        ? `Context: not measured yet (fills in after the first reply; window ${short(u.context.window)} tokens)`
+        : `Context: ${u.context.percent}% (${short(u.context.tokens ?? 0)} / ${short(u.context.window)} tokens)`,
       ...(u.rateLimits.length === 0
         ? ['Rate limits: none reported (API key or cloud provider billing, or no reading yet)']
         : u.rateLimits.map(l => {
@@ -295,7 +297,12 @@ export const register: Register = (on, options) => {
     return (
       <Box>
         <Text dimColor>ctx </Text>
-        <Text color={tone(m.contextPercent, 70, 85)}>{m.contextPercent ?? '?'}%</Text>
+        {/* Absent until the first reply of a fresh or just-compacted window. */}
+        {m.contextPercent === undefined ? (
+          <Text dimColor>–</Text>
+        ) : (
+          <Text color={tone(m.contextPercent, 70, 85)}>{m.contextPercent}%</Text>
+        )}
         {m.limits.map(l => {
           const r = untilReset(l.resetsAt, now)
           return (

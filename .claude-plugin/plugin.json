@@ -1,6 +1,6 @@
 {
   "name": "usage-meter",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Live token usage, limits and spend for Claude Code, with warnings before you hit a limit or budget. Works on subscriptions, API keys and cloud providers.",
   "author": {
     "name": "Aatra",

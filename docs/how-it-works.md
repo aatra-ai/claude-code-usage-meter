@@ -10,7 +10,7 @@ ctx 42% · 5h 31% (2h14m) · 7d 79% (2d) · last 84k · session 1.2M tok · ~$3.
 
 | Part | Meaning |
 |---|---|
-| `ctx 42%` | How full the context window is |
+| `ctx 42%` | How full the context window is. Shows `ctx –` until the first reply of a new or just-compacted session, since Claude Code reports it only then |
 | `5h 31% (2h14m)` | Your 5-hour usage window, and the time until it resets |
 | `7d 79% (2d)` | Your weekly usage window, and the time until it resets |
 | `last 84k` | Tokens used by the last turn |
