@@ -1,0 +1,1 @@
+{ "name": "usage-meter", "version": "0.1.0", "description": "Live token usage, context fill, cost and rate-limit band with warnings on heavy usage or approaching limits", "types": "./types/index.d.ts", "license": "MIT" }
