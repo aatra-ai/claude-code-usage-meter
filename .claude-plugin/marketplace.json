@@ -1,5 +1,5 @@
 {
   "name": "usage-meter",
-  "owner": { "name": "krishnaraj-aatra" },
+  "owner": { "name": "aatra-ai" },
   "plugins": [{ "name": "usage-meter", "source": "./" }]
 }

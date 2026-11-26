@@ -31,7 +31,7 @@ Thresholds are constants at the top of `hooks/register.tsx`.
 At the prompt of a Claude Code terminal session:
 
 ```
-/plugin install usage-meter --marketplace krishnaraj-aatra/claude-code-usage-meter
+/plugin install usage-meter --marketplace aatra-ai/claude-code-usage-meter
 ```
 
 Answer `y` to add the marketplace, then pick a scope (user scope loads it in every session).
@@ -39,10 +39,10 @@ Answer `y` to add the marketplace, then pick a scope (user scope loads it in eve
 From a shell:
 
 ```
-claude plugin install usage-meter --marketplace krishnaraj-aatra/claude-code-usage-meter
+claude plugin install usage-meter --marketplace aatra-ai/claude-code-usage-meter
 ```
 
-In the desktop app: click + next to the prompt box, then Plugins, Add marketplace with `krishnaraj-aatra/claude-code-usage-meter`, then Add plugin.
+In the desktop app: click + next to the prompt box, then Plugins, Add marketplace with `aatra-ai/claude-code-usage-meter`, then Add plugin.
 
 ## Privacy
 
