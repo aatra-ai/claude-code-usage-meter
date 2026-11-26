@@ -1,0 +1,13 @@
+# OS and editor files
+.DS_Store
+*~
+*.swp
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Written by Claude Code when it loads the mod
+.claude-plugin/types/
+.mcpb-cache/

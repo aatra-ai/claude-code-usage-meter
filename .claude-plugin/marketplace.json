@@ -1,5 +1,12 @@
 {
   "name": "usage-meter",
-  "owner": { "name": "aatra-ai" },
-  "plugins": [{ "name": "usage-meter", "source": "./" }]
+  "owner": { "name": "Aatra", "url": "https://aatra.ai" },
+  "metadata": { "description": "Claude Code Usage Meter by Aatra: live token usage and limit warnings" },
+  "plugins": [
+    {
+      "name": "usage-meter",
+      "source": "./",
+      "description": "Live token usage, context fill, cost and rate-limit line with warnings"
+    }
+  ]
 }

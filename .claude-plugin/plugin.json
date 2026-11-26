@@ -1,1 +1,11 @@
-{ "name": "usage-meter", "version": "0.1.0", "description": "Live token usage, context fill, cost and rate-limit band with warnings on heavy usage or approaching limits", "types": "./types/index.d.ts", "license": "MIT" }
+{
+  "name": "usage-meter",
+  "version": "0.1.0",
+  "description": "Live token usage, context fill, cost and rate-limit line for Claude Code, with warnings on heavy usage or approaching limits",
+  "author": { "name": "Aatra", "url": "https://aatra.ai" },
+  "homepage": "https://github.com/aatra-ai/claude-code-usage-meter",
+  "repository": "https://github.com/aatra-ai/claude-code-usage-meter",
+  "license": "MIT",
+  "keywords": ["usage", "tokens", "rate-limits", "cost", "context", "status", "mod"],
+  "types": "./types/index.d.ts"
+}
